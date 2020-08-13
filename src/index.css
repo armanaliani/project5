@@ -11,26 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.returnDream {
-  list-style: none;
-  border: 3px solid black;
-}
-
-.errorMessage {
-  color: red;
-}
-
-.dreamInput {
-  display:block;
-  margin: 0 auto;
-  height: 100px;
-  width: 50%;
-  resize: none;
-}
-
-form input {
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-}

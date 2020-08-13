@@ -9,7 +9,8 @@ class App extends Component {
       dreams: [],
       userInput: '',
       inputTitle: '',
-      errorMessage: ''
+      errorMessage: '',
+      // vote: 0,
     }
   }
 
@@ -19,7 +20,6 @@ class App extends Component {
     dbRef.on('value', (snapshot) => {
 
       const data = snapshot.val();
-      console.log(data);
 
       const newDreamsArray = [];
 
@@ -58,6 +58,7 @@ class App extends Component {
       const dreamObjectTwo = {
         dream: this.state.userInput,
         title: this.state.inputTitle,
+        vote: 0
       }
       dbRef.push(dreamObjectTwo);
 
@@ -79,9 +80,22 @@ class App extends Component {
     })
   }
 
+  handleVote = (voteId) => {
+    const dbRef = firebase.database().ref(`/${voteId}`);
+
+    dbRef.once('value', (snapshot) => {
+      console.log(snapshot.val());
+
+      const newValue = snapshot.val();
+      newValue.vote++;
+
+      console.log(newValue);
+      dbRef.set(newValue);
+    }) 
+  }
+
   handleRemove = (dreamId) => {
     const dbRef = firebase.database().ref();
-    console.log(dbRef);
 
     dbRef.child(dreamId).remove();
   }
@@ -91,40 +105,47 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Dreams</h1>
+      <main className="App">
+        <section className="top">
+          <div className="wrapper">
+            <h1>Dreams</h1>
 
-        <form action="submit">
-          <label htmlFor="newTitle">give your dream a title</label>
-          <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle"/>
-          <label htmlFor="newDream">tell us about a dream youve had</label>
-          <textarea 
-              name="newDream" 
-              id="newDream" 
-              className="dreamInput" 
-              rows="10" 
-              onChange={this.handleChange}
-              value={this.state.userInput} 
-          ></textarea>
-          <button onClick={this.handleClick}>Add Dream</button>
-        </form>
+            <form action="submit">
+              <label htmlFor="newTitle">give your dream a title</label>
+              <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle"/>
+              <label htmlFor="newDream">tell us about a dream youve had</label>
+              <textarea 
+                  name="newDream" 
+                  id="newDream" 
+                  className="dreamInput" 
+                  rows="10" 
+                  onChange={this.handleChange}
+                  value={this.state.userInput} 
+              ></textarea>
+              <button onClick={this.handleClick}>Add Dream</button>
+            </form>
 
-        <p className="errorMessage">{this.state.errorMessage}</p>
-
-        <ul>
-          {
-            this.state.dreams.map( (dreamObject) => {
-              return (
-              <li key={dreamObject.key} className="returnDream">
-                <h2>{dreamObject.data.title}</h2>
-                <p>{dreamObject.data.dream}</p>
-                <button onClick={() => this.handleRemove(dreamObject.key)}>remove</button>
-              </li>
-              )
-            })
-          }
-        </ul>
-      </div>
+            <p className="errorMessage">{this.state.errorMessage}</p>
+          </div>
+        </section>
+        <section className="displaySection">
+          <ul className="dreamDisplay wrapper">
+            {
+              this.state.dreams.map( (dreamObject) => {
+                return (
+                <li key={dreamObject.key} className="returnDream">
+                  <h2>{dreamObject.data.title}</h2>
+                  <p>{dreamObject.data.dream}</p>
+                  <p>{dreamObject.data.vote}</p>
+                  <button onClick={() => this.handleVote(dreamObject.key)}>upvote</button>
+                  <button onClick={() => this.handleRemove(dreamObject.key)}>remove</button>
+                </li>
+                )
+              })
+            }
+          </ul>
+        </section>
+      </main>
     );
   }
 }
