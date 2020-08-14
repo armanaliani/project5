@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import firebase from './firebase';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 class App extends Component {
@@ -10,7 +13,6 @@ class App extends Component {
       userInput: '',
       inputTitle: '',
       errorMessage: '',
-      // vote: 0,
     }
   }
 
@@ -69,7 +71,7 @@ class App extends Component {
     } else {
       // error handling
       this.setState({
-        errorMessage: "Please enter a message before submitting"
+        errorMessage: "Please give your entry a title and content before submitting"
       })
     }
 
@@ -78,18 +80,16 @@ class App extends Component {
       inputTitle: '',
       userInput: ''
     })
+    window.location = "#addedDream";
   }
 
   handleVote = (voteId) => {
     const dbRef = firebase.database().ref(`/${voteId}`);
 
     dbRef.once('value', (snapshot) => {
-      console.log(snapshot.val());
-
       const newValue = snapshot.val();
       newValue.vote++;
 
-      console.log(newValue);
       dbRef.set(newValue);
     }) 
   }
@@ -108,21 +108,23 @@ class App extends Component {
       <main className="App">
         <section className="top">
           <div className="wrapper">
-            <h1>Dreams</h1>
-
+            <h1>Dream Share</h1>
+            <h3>A place for everyone to document their dreams and explore the bizarre world of the subconcious</h3>
             <form action="submit">
               <label htmlFor="newTitle">give your dream a title</label>
-              <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle"/>
-              <label htmlFor="newDream">tell us about a dream youve had</label>
+              <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle" className="titleInput" placeholder="Title" maxlength="20"/>
+              <label htmlFor="newDream">tell us about a dream you've had</label>
               <textarea 
                   name="newDream" 
                   id="newDream" 
                   className="dreamInput" 
-                  rows="10" 
+                  rows="20" 
                   onChange={this.handleChange}
                   value={this.state.userInput} 
+                  maxlength="1100"
+                  placeholder="One night I dreamt..."
               ></textarea>
-              <button onClick={this.handleClick}>Add Dream</button>
+              <button className="addDream" onClick={this.handleClick}>Share Dream</button>
             </form>
 
             <p className="errorMessage">{this.state.errorMessage}</p>
@@ -136,15 +138,20 @@ class App extends Component {
                 <li key={dreamObject.key} className="returnDream">
                   <h2>{dreamObject.data.title}</h2>
                   <p>{dreamObject.data.dream}</p>
-                  <p>{dreamObject.data.vote}</p>
-                  <button onClick={() => this.handleVote(dreamObject.key)}>upvote</button>
-                  <button onClick={() => this.handleRemove(dreamObject.key)}>remove</button>
+                  <div className="upVote">
+                    <p>{dreamObject.data.vote}</p>
+                    <button className="voteButton" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
+                  </div>
+                  <button className="removeButton" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
                 </li>
                 )
               })
             }
           </ul>
         </section>
+        <footer id='addedDream'>
+          <p>Created by Arman Aliani</p>
+        </footer>
       </main>
     );
   }
