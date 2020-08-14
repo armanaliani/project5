@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/project5/static/css/main.3d4e06a4.chunk.css",
-    "main.js": "/project5/static/js/main.27273924.chunk.js",
-    "main.js.map": "/project5/static/js/main.27273924.chunk.js.map",
-    "runtime-main.js": "/project5/static/js/runtime-main.62befbb1.js",
-    "runtime-main.js.map": "/project5/static/js/runtime-main.62befbb1.js.map",
-    "static/js/2.39f6ed04.chunk.js": "/project5/static/js/2.39f6ed04.chunk.js",
-    "static/js/2.39f6ed04.chunk.js.map": "/project5/static/js/2.39f6ed04.chunk.js.map",
-    "index.html": "/project5/index.html",
-    "precache-manifest.352165c636c1ffbf7a787a4fc47f82a9.js": "/project5/precache-manifest.352165c636c1ffbf7a787a4fc47f82a9.js",
-    "service-worker.js": "/project5/service-worker.js",
-    "static/css/main.3d4e06a4.chunk.css.map": "/project5/static/css/main.3d4e06a4.chunk.css.map",
-    "static/js/2.39f6ed04.chunk.js.LICENSE.txt": "/project5/static/js/2.39f6ed04.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/project5/static/media/pexels-miguel-á-padriñán-19670.6ec953f2.jpg"
+    "main.css": "/dreamshare/static/css/main.f37a7043.chunk.css",
+    "main.js": "/dreamshare/static/js/main.c7063864.chunk.js",
+    "main.js.map": "/dreamshare/static/js/main.c7063864.chunk.js.map",
+    "runtime-main.js": "/dreamshare/static/js/runtime-main.2033bb94.js",
+    "runtime-main.js.map": "/dreamshare/static/js/runtime-main.2033bb94.js.map",
+    "static/js/2.655fc24d.chunk.js": "/dreamshare/static/js/2.655fc24d.chunk.js",
+    "static/js/2.655fc24d.chunk.js.map": "/dreamshare/static/js/2.655fc24d.chunk.js.map",
+    "index.html": "/dreamshare/index.html",
+    "precache-manifest.5367d9ad74764883c39b0a861d797a84.js": "/dreamshare/precache-manifest.5367d9ad74764883c39b0a861d797a84.js",
+    "service-worker.js": "/dreamshare/service-worker.js",
+    "static/css/main.f37a7043.chunk.css.map": "/dreamshare/static/css/main.f37a7043.chunk.css.map",
+    "static/js/2.655fc24d.chunk.js.LICENSE.txt": "/dreamshare/static/js/2.655fc24d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/dreamshare/static/media/pexels-miguel-á-padriñán-19670.6ec953f2.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.62befbb1.js",
-    "static/js/2.39f6ed04.chunk.js",
-    "static/css/main.3d4e06a4.chunk.css",
-    "static/js/main.27273924.chunk.js"
+    "static/js/runtime-main.2033bb94.js",
+    "static/js/2.655fc24d.chunk.js",
+    "static/css/main.f37a7043.chunk.css",
+    "static/js/main.c7063864.chunk.js"
   ]
 }
