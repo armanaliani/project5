@@ -16,6 +16,7 @@ class App extends Component {
     }
   }
 
+  // pull data from firebase to display
   componentDidMount() {
     const dbRef = firebase.database().ref();
 
@@ -38,18 +39,21 @@ class App extends Component {
     })
   }
 
+  // dream content event listener
   handleChange = (event) => {
     this.setState({
       userInput: event.target.value
     })
   }
 
+  // title event listener
   handleTitle = (event) => {
     this.setState({
       inputTitle: event.target.value
     })
   }
 
+  // push dream input data to firebase
   handleClick= (event) => {
     event.preventDefault();
 
@@ -83,6 +87,7 @@ class App extends Component {
     window.location = "#addedDream";
   }
 
+  // upvote selected entry
   handleVote = (voteId) => {
     const dbRef = firebase.database().ref(`/${voteId}`);
 
@@ -94,6 +99,7 @@ class App extends Component {
     }) 
   }
 
+  // remove entry
   handleRemove = (dreamId) => {
     const dbRef = firebase.database().ref();
 
