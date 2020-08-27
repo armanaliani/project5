@@ -11,7 +11,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* /////////////////////////////////// */
 
 /* body styles */
-.App {
+.app {
   text-align: center;
   /* Photo by Miguel Á. Padriñán from Pexels */
   background-image: url(./assets/pexels-miguel-á-padriñán-19670.jpg);
