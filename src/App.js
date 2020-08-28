@@ -72,6 +72,8 @@ class App extends Component {
       this.setState({
         errorMessage: '',
       })
+
+      window.location = "#addedDream";
     } else {
       // error handling
       this.setState({
@@ -84,7 +86,6 @@ class App extends Component {
       inputTitle: '',
       userInput: ''
     })
-    window.location = "#addedDream";
   }
 
   // upvote selected entry
@@ -146,10 +147,11 @@ class App extends Component {
                   <p>{dreamObject.data.dream}</p>
                   <div className="upVote">
                     <p>{dreamObject.data.vote}</p>
-                    {/* <label for="upVote" className="srOnly">like this dream</label> */}
-                    <button className="voteButton" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
+                    <label for="voteLike" className="srOnly">like this dream</label>
+                    <button className="voteButton" name="voteLike" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
                   </div>
-                  <button className="removeButton" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
+                  <label for="removeEntry" className="srOnly">remove this dream entry</label>
+                  <button className="removeButton" name="removeEntry" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
                 </li>
                 )
               })
