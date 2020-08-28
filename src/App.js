@@ -72,6 +72,8 @@ class App extends Component {
       this.setState({
         errorMessage: '',
       })
+
+      window.location = "#addedDream";
     } else {
       // error handling
       this.setState({
@@ -84,7 +86,6 @@ class App extends Component {
       inputTitle: '',
       userInput: ''
     })
-    window.location = "#addedDream";
   }
 
   // upvote selected entry
@@ -111,14 +112,14 @@ class App extends Component {
 
   render() {
     return (
-      <main className="App">
+      <main className="app">
         <section className="top">
           <div className="wrapper">
             <h1>Dream Share</h1>
             <h3>A place for everyone to document their dreams and explore the bizarre world of the subconcious</h3>
             <form action="submit">
               <label htmlFor="newTitle">give your dream a title</label>
-              <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle" className="titleInput" placeholder="Title" maxlength="20"/>
+              <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle" className="titleInput" placeholder="Title" maxLength="20"/>
               <label htmlFor="newDream">tell us about a dream you've had</label>
               <textarea 
                   name="newDream" 
@@ -127,7 +128,7 @@ class App extends Component {
                   rows="20" 
                   onChange={this.handleChange}
                   value={this.state.userInput} 
-                  maxlength="1100"
+                  maxLength="1100"
                   placeholder="One night I dreamt..."
               ></textarea>
               <button className="addDream" onClick={this.handleClick}>Share Dream</button>
@@ -146,9 +147,11 @@ class App extends Component {
                   <p>{dreamObject.data.dream}</p>
                   <div className="upVote">
                     <p>{dreamObject.data.vote}</p>
-                    <button className="voteButton" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
+                    <label for="voteLike" className="srOnly">like this dream</label>
+                    <button className="voteButton" name="voteLike" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
                   </div>
-                  <button className="removeButton" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
+                  <label for="removeEntry" className="srOnly">remove this dream entry</label>
+                  <button className="removeButton" name="removeEntry" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
                 </li>
                 )
               })
