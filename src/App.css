@@ -264,7 +264,9 @@ footer .fa-angle-up {
 }
 
 .themeToggle button:hover,
-.darkMode .themeToggle button:hover {
+.darkMode .themeToggle button:hover,
+.themeToggle button:focus,
+.darkMode .themeToggle button:focus {
   background-color: gold;
 }
 
