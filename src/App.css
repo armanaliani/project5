@@ -11,33 +11,49 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* /////////////////////////////////// */
 
 /* body styles */
-.app {
+html {
+  scroll-behavior: smooth;
+}
+
+main {
   text-align: center;
-  /* Photo by Miguel Á. Padriñán from Pexels */
-  background-image: url(./assets/pexels-miguel-á-padriñán-19670.jpg);
   height: 100%;
-  background-size: cover;
-  background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
   font-size: 100%;
 }
 
-/* landing page styles */
-.top {
-  padding-bottom: 50px;
-  margin-bottom: 50px;
-  color: black;
+.appBackground {
+  background-image:url(assets/dreamShareBackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+/* landing page styles */
+.top {
+  padding-bottom: 15px;
+  color: #232323;
+  background: #fafafa;
+  border: 8px solid #232323;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
 /* /////////////////////////////////// */
 /* text styles */
 /* /////////////////////////////////// */
 h1, 
 h2,
 label {
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Special Elite', cursive;
   text-transform: capitalize;
   white-space: initial;
+}
+
+form,
+h1,
+h3 {
+  max-width:800px;
 }
 
 h1 {
@@ -49,7 +65,7 @@ h1 {
 
 h2 {
   padding-bottom: 11px;
-  border-bottom: 2px solid #B0E0E6;
+  border-bottom: 2px solid #232323;
   word-wrap: break-word;
 }
 
@@ -76,6 +92,7 @@ label {
 /* /////////////////////////////////// */
 /* form styles */
 /* /////////////////////////////////// */
+
 .dreamInput {
   display:block;
   margin: 11px auto;
@@ -104,9 +121,9 @@ label {
 .addDream {
   margin-top: 20px;
   padding: 9px;
-  border: 5px solid #B0E0E6;
+  border: 5px solid #232323;
   border-radius: 10px;
-  font-family: 'Oleo Script', cursive;
+  font-family: 'Special Elite', cursive;
   background-color: white;
   font-size: 1.3rem;
   transition:transform 0.3s;
@@ -114,13 +131,14 @@ label {
 
 .addDream:hover,
 .addDream:focus {
-  background-color: #B0E0E6;
+  background-color: #232323;
+  color: #fafafa;
   transform: scale(1.05);
 }
 
 form input, 
 form textarea {
-  border: 8px solid #B0E0E6;
+  border: 8px solid #232323;
   border-radius: 10px;
   display: block;
   margin: 0 auto;
@@ -136,6 +154,7 @@ form textarea {
 .dreamDisplay {
   column-count: 3;
   column-width: 300px;
+  column-gap:50px;
   padding-left: 0;
 }
 
@@ -149,9 +168,10 @@ form textarea {
   text-align: left;
   background-color: white;
   width:100% ;
-  border: 8px solid #B0E0E6;
+  border: 8px solid #232323;
   border-radius: 10px;
   position: relative;
+  word-wrap: break-word;
 }
 
 .wrapper {
@@ -203,4 +223,133 @@ footer p {
   padding: 22px;
   font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
+  color: #232323;
+}
+
+footer a {
+  text-decoration: none;
+  color: #232323;
+  padding: 5px;
+}
+
+footer a:hover,
+footer a:focus {
+  padding-bottom: 2px;
+  border-bottom: 3px solid #232323;
+}
+
+footer {
+  border-top: 5px solid #232323;
+  background: #fafafa;
+}
+
+footer .fa-angle-up {
+  font-size: 50px;
+}
+/* /////////////////////////////////// */
+/* dark mode */
+/* /////////////////////////////////// */
+
+/* dark mode toggle */
+
+.themeToggle button {
+  top: 0px;
+  right: 0px;
+  padding: 15px;
+  background: #232323;
+  border: none;
+  position: fixed;
+  font-size: 1.7rem;
+  z-index: 10;
+}
+
+.themeToggle button:hover,
+.darkMode .themeToggle button:hover {
+  background-color: gold;
+}
+
+.darkMode .themeToggle button {
+  background: #fafafa;
+}
+.fa-sun {
+  color: #232323;
+}
+.fa-moon {
+  color: #fafafa;
+}
+
+
+/* main dark mode */
+.darkMode .appBackground {
+  background-image:url(assets/dreamShareBackgroundDark.jpg);
+}
+.darkMode .top {
+  color: #fafafa;
+  border: 8px solid #fafafa;
+  background: #232323;
+}
+.darkMode h2,
+.darkMode p {
+  color: #fafafa;
+}
+.darkMode .errorMessage {
+  color: red;
+}
+.darkMode .addDream {
+  border: 5px solid #fafafa;
+  background-color: #232323;
+}
+.darkMode .addDream:hover,
+.darkMode .addDream:focus {
+  background-color: #fafafa;
+  color: #232323;
+}
+.darkMode form input, 
+.darkMode form textarea {
+  border: 8px solid #fafafa;
+  background-color: #232323;
+  color: #fafafa;
+}
+.darkMode form button {
+  color: #fafafa;
+}
+
+/* dream display dark mode */
+.darkMode h2 {
+  border-bottom: 2px solid #fafafa;
+}
+.darkMode .returnDream {
+  background-color: #232323;
+  border: 8px solid #fafafa;
+}
+.darkMode .removeButton {
+  color: #868686;
+}
+.darkMode .removeButton:hover,
+.darkMode .removeButton:focus {
+  color: #fafafa;
+}
+.darkMode .voteButton {
+  color: #fafafa;
+}
+.darkMode .voteButton:hover {
+  color: red;
+}
+.darkMode .voteButton:focus {
+  color: rgb(241, 120, 120);
+}
+
+/* dark mode footer */
+.darkMode footer p {
+  color: #fafafa;
+}
+.darkMode footer a {
+  color: #fafafa;
+}
+.darkMode footer a:hover {
+  border-bottom: 3px solid #fafafa;
+}
+.darkMode footer {
+  border-top: 5px solid #fafafa;
+  background: #232323;
 }
