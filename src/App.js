@@ -141,13 +141,13 @@ class App extends Component {
     return (
       <main className={this.state.darkMode ? 'darkMode ': 'app'} idName="top">
         <div className="themeToggle">
-          <button onClick={this.handleTheme}><FontAwesomeIcon icon={this.state.darkMode ? faSun : faMoon}/></button>
+          <button aria-label="light/dark mode" onClick={this.handleTheme}><FontAwesomeIcon icon={this.state.darkMode ? faSun : faMoon}/></button>
         </div>
         <div className="appBackground">
           <section className="top">
             <div>
               <h1>Dream Share</h1>
-              <h3>A place for everyone to document their dreams and explore the bizarre world of the subconcious</h3>
+              <h2>A place for everyone to document their dreams and explore the bizarre world of the subconcious</h2>
               <form action="submit">
                 <label htmlFor="newTitle">give your dream a title</label>
                 <input onChange={this.handleTitle} value={this.state.inputTitle}type="text" id="newTitle" className="titleInput" placeholder="Title" maxLength="20"/>
@@ -178,11 +178,9 @@ class App extends Component {
                     <p>{dreamObject.data.dream}</p>
                     <div className="upVote">
                       <p>{dreamObject.data.vote}</p>
-                      <label htmlFor="voteLike" className="srOnly">like this dream</label>
-                      <button className="voteButton" name="voteLike" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
+                      <button aria-label="like this dream" className="voteButton" name="like entry Button" onClick={() => this.handleVote(dreamObject.key)}><FontAwesomeIcon icon={faHeart}/></button>
                     </div>
-                    <label htmlFor="removeEntry" className="srOnly">remove this dream entry</label>
-                    <button className="removeButton" name="removeEntry" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
+                    <button aria-label="remove this dream entry" className="removeButton" name="remove entry button" onClick={() => this.handleRemove(dreamObject.key)}><FontAwesomeIcon icon={faTimes}/></button>
                   </li>
                   )
                 })
@@ -190,8 +188,7 @@ class App extends Component {
             </ul>
           </section>
           <footer id='addedDream'>
-            <label htmlFor="backToTop" className="srOnly">back to top</label>
-            <a href="#top" id="backToTop"><FontAwesomeIcon icon={faAngleUp}/></a>
+            <a aria-label="Back to top" href="#top" id="backToTop"><FontAwesomeIcon icon={faAngleUp}/></a>
             <p>Created by <a href="https://alianicodes.com/" target="_blank" rel="noopener">Arman Aliani</a></p>
           </footer>
         </div>
