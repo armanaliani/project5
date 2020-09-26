@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2dee5f5614a364e9f03cf16d7d41c3f",
+    "revision": "7f20adce8e5d115e359f63ec9b9c2d75",
     "url": "/dreamshare/index.html"
   },
   {
-    "revision": "c2c677f5a058e7ef2745",
-    "url": "/dreamshare/static/css/main.4c85cff7.chunk.css"
+    "revision": "b653f3e077d2eea82473",
+    "url": "/dreamshare/static/css/main.ea29b58b.chunk.css"
   },
   {
     "revision": "a90a35d1243d5b2bed8f",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dreamshare/static/js/2.bf29acaa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c2c677f5a058e7ef2745",
-    "url": "/dreamshare/static/js/main.3d13546a.chunk.js"
+    "revision": "b653f3e077d2eea82473",
+    "url": "/dreamshare/static/js/main.db5e2407.chunk.js"
   },
   {
     "revision": "25fa9c0be285c635de81",
