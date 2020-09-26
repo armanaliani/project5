@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dreamshare/static/css/main.ea29b58b.chunk.css",
-    "main.js": "/dreamshare/static/js/main.db5e2407.chunk.js",
-    "main.js.map": "/dreamshare/static/js/main.db5e2407.chunk.js.map",
+    "main.js": "/dreamshare/static/js/main.44bc7cb9.chunk.js",
+    "main.js.map": "/dreamshare/static/js/main.44bc7cb9.chunk.js.map",
     "runtime-main.js": "/dreamshare/static/js/runtime-main.2033bb94.js",
     "runtime-main.js.map": "/dreamshare/static/js/runtime-main.2033bb94.js.map",
     "static/js/2.bf29acaa.chunk.js": "/dreamshare/static/js/2.bf29acaa.chunk.js",
     "static/js/2.bf29acaa.chunk.js.map": "/dreamshare/static/js/2.bf29acaa.chunk.js.map",
     "index.html": "/dreamshare/index.html",
-    "precache-manifest.587b50580402595b2aedfc37265ed9a0.js": "/dreamshare/precache-manifest.587b50580402595b2aedfc37265ed9a0.js",
+    "precache-manifest.b5374f62254f8a6ffc1c8683c35bf653.js": "/dreamshare/precache-manifest.b5374f62254f8a6ffc1c8683c35bf653.js",
     "service-worker.js": "/dreamshare/service-worker.js",
     "static/css/main.ea29b58b.chunk.css.map": "/dreamshare/static/css/main.ea29b58b.chunk.css.map",
     "static/js/2.bf29acaa.chunk.js.LICENSE.txt": "/dreamshare/static/js/2.bf29acaa.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2033bb94.js",
     "static/js/2.bf29acaa.chunk.js",
     "static/css/main.ea29b58b.chunk.css",
-    "static/js/main.db5e2407.chunk.js"
+    "static/js/main.44bc7cb9.chunk.js"
   ]
 }
