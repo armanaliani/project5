@@ -139,7 +139,7 @@ class App extends Component {
 
   render() {
     return (
-      <main className={this.state.darkMode ? 'darkMode ': 'app'} idName="top">
+      <main className={this.state.darkMode ? 'darkMode ': 'app'} idname="top">
         <div className="themeToggle">
           <button aria-label="light/dark mode" onClick={this.handleTheme}><FontAwesomeIcon icon={this.state.darkMode ? faSun : faMoon}/></button>
         </div>
@@ -189,7 +189,7 @@ class App extends Component {
           </section>
           <footer id='addedDream'>
             <a aria-label="Back to top" href="#top" id="backToTop"><FontAwesomeIcon icon={faAngleUp}/></a>
-            <p>Created by <a href="https://alianicodes.com/" target="_blank" rel="noopener">Arman Aliani</a></p>
+            <p>Created by <a href="https://alianicodes.com/" target="_blank" rel="noopener noreferrer">Arman Aliani</a></p>
           </footer>
         </div>
       </main>
