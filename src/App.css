@@ -51,8 +51,7 @@ label {
 }
 
 form,
-h1,
-h3 {
+h1 {
   max-width:800px;
 }
 
@@ -60,7 +59,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 22px;
   padding-top: 5vh;
-  font-size: 5.5rem;
+  font-size: 5.6rem;
 }
 
 h2 {
@@ -69,11 +68,15 @@ h2 {
   word-wrap: break-word;
 }
 
-h3 {
+.top h2 {
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   width: 80%;
   max-width: 700px;
+  font-family: 'Roboto', sans-serif;
+  border-bottom: none;
+  font-size: 1.2rem;
+  padding-bottom: 0px;
 }
 
 label {
@@ -109,7 +112,7 @@ label {
   max-width: 350px;
   padding: 11px;
   font-family: 'Roboto', sans-serif;
-  margin-bottom: 22px;
+  margin-bottom: 33px;
   margin-top: 11px;
 }
 
@@ -289,6 +292,9 @@ footer .fa-angle-up {
   color: #fafafa;
   border: 8px solid #fafafa;
   background: #232323;
+}
+.darkMode .top h2 {
+  border-bottom: none;
 }
 .darkMode h2,
 .darkMode p {
