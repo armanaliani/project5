@@ -362,3 +362,13 @@ footer .fa-angle-up {
   border-top: 5px solid #fafafa;
   background: #232323;
 }
+
+/* smaller image size on smaller screens for performance */
+@media (max-width: 500px) {
+  .appBackground {
+    background-image:url(assets/dreamShareBackgroundMobile.jpg);
+  }
+  .darkMode .appBackground {
+    background-image:url(assets/dreamShareBackgroundDarkMobile.jpg);
+  }
+}
