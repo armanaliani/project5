@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a731f7a8a90378b8235ef4e542b2e32e",
+    "revision": "c0d9fb6074e3f1c79a082adaf964b6c7",
     "url": "/dreamshare/index.html"
   },
   {
-    "revision": "e82c456f214875e07a59",
-    "url": "/dreamshare/static/css/main.1485f924.chunk.css"
+    "revision": "faae4ca107fd07929444",
+    "url": "/dreamshare/static/css/main.06f217c1.chunk.css"
   },
   {
     "revision": "a90a35d1243d5b2bed8f",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dreamshare/static/js/2.bf29acaa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e82c456f214875e07a59",
+    "revision": "faae4ca107fd07929444",
     "url": "/dreamshare/static/js/main.44bc7cb9.chunk.js"
   },
   {
@@ -24,11 +24,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dreamshare/static/js/runtime-main.2033bb94.js"
   },
   {
-    "revision": "b86612a46ef39aa4447589dd9b5a5a13",
-    "url": "/dreamshare/static/media/dreamShareBackground.b86612a4.jpg"
+    "revision": "1a1c53bac1a3cf292a347b2377b2d434",
+    "url": "/dreamshare/static/media/dreamShareBackground.1a1c53ba.jpg"
   },
   {
-    "revision": "15cf362399d1d9163699c58a21421d29",
-    "url": "/dreamshare/static/media/dreamShareBackgroundDark.15cf3623.jpg"
+    "revision": "ad3f349a0e6575e8c7a0a691877db999",
+    "url": "/dreamshare/static/media/dreamShareBackgroundDark.ad3f349a.jpg"
   }
 ]);
