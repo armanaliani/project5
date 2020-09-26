@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dreamshare/static/css/main.ea29b58b.chunk.css",
+    "main.css": "/dreamshare/static/css/main.358fccf1.chunk.css",
     "main.js": "/dreamshare/static/js/main.44bc7cb9.chunk.js",
     "main.js.map": "/dreamshare/static/js/main.44bc7cb9.chunk.js.map",
     "runtime-main.js": "/dreamshare/static/js/runtime-main.2033bb94.js",
@@ -8,16 +8,16 @@
     "static/js/2.bf29acaa.chunk.js": "/dreamshare/static/js/2.bf29acaa.chunk.js",
     "static/js/2.bf29acaa.chunk.js.map": "/dreamshare/static/js/2.bf29acaa.chunk.js.map",
     "index.html": "/dreamshare/index.html",
-    "precache-manifest.b5374f62254f8a6ffc1c8683c35bf653.js": "/dreamshare/precache-manifest.b5374f62254f8a6ffc1c8683c35bf653.js",
+    "precache-manifest.374609d5b1f69aa0eaae63b84fec10f5.js": "/dreamshare/precache-manifest.374609d5b1f69aa0eaae63b84fec10f5.js",
     "service-worker.js": "/dreamshare/service-worker.js",
-    "static/css/main.ea29b58b.chunk.css.map": "/dreamshare/static/css/main.ea29b58b.chunk.css.map",
+    "static/css/main.358fccf1.chunk.css.map": "/dreamshare/static/css/main.358fccf1.chunk.css.map",
     "static/js/2.bf29acaa.chunk.js.LICENSE.txt": "/dreamshare/static/js/2.bf29acaa.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/dreamshare/static/media/dreamShareBackgroundDark.5a3b8273.jpg"
+    "static/media/App.css": "/dreamshare/static/media/dreamShareBackgroundDark.dce149e3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2033bb94.js",
     "static/js/2.bf29acaa.chunk.js",
-    "static/css/main.ea29b58b.chunk.css",
+    "static/css/main.358fccf1.chunk.css",
     "static/js/main.44bc7cb9.chunk.js"
   ]
 }
